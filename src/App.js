@@ -10,7 +10,7 @@ class App extends Component {
   componentDidMount = () => {
     fetch("https://jsonplaceholder.typicode.com/users")
       .then(data => data.json()).then(vepa => {
-        //console.log(vepa);
+        console.log(vepa);
 
         this.setState({
           users: vepa
@@ -24,6 +24,22 @@ class App extends Component {
   render() {
     return (
       <div className='App'>
+
+        <h1>Users</h1>
+
+        {
+          this.state.users.map(user => 
+            <div key = {user.id}>
+              {
+                user.name
+              }
+               --@@
+              {
+                user.username
+              }
+            </div>
+          )
+        }
 
 
 
