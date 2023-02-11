@@ -13,8 +13,8 @@ class App extends Component {
   componentDidMount = () => {
 
     setTimeout(() => {
-      fetch("https://jsonplaceholder.typicode.com/users")
-        .then(data => data.json()).then(vepa => {
+      axios.get("https://jsonplaceholder.typicode.com/users")
+        .then(vepa => vepa.data).then(vepa => {
           console.log(vepa);
 
           this.setState({
