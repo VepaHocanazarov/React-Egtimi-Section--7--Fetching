@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import "./App.css"
+import Pratik from './Pratik';
 
 class App extends Component {
 
@@ -21,11 +22,9 @@ class App extends Component {
           })
         }
         )
-    },800);
+    }, 800);
 
   }
-
-
 
   render() {
 
@@ -52,7 +51,7 @@ class App extends Component {
           )
         }
 
-
+        <Pratik/>
 
       </div>
     )
