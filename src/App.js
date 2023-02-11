@@ -2,11 +2,12 @@ import React, { Component } from 'react'
 import "./App.css"
 import Pratik from './Pratik';
 import axios from "axios";
+import Post from "./Post"
 
 class App extends Component {
 
   state = {
-    users: [],
+    post: [],
     isLoading: true
   };
 
@@ -18,7 +19,7 @@ class App extends Component {
           console.log(vepa);
 
           this.setState({
-            users: vepa,
+            post: vepa,
             isLoading: false
           })
         }
@@ -51,6 +52,8 @@ class App extends Component {
             </div>
           )
         }
+
+        <Post {...this.state} />
 
         <Pratik/>
 
