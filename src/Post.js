@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import LoaderHOC from './LoaderHOC';
 
  class Post extends Component {
   render() {
@@ -22,4 +23,4 @@ import React, { Component } from 'react'
   }
 }
 
-export default Post;
+export default LoaderHOC (Post);

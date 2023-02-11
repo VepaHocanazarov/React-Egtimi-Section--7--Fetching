@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
 
-class LoaderHOC = (WrappedComponent) => {
+const LoaderHOC = (WrappedComponent) => {
 
     return class LoaderHOC extends Component {
 
         render() {
             return (
-                
+
+
+                    this.props.posts.length === 0 ? <div>Loading...</div>
+                    :<WrappedComponent {...this.props}/>
 
             );
         }
@@ -15,3 +18,4 @@ class LoaderHOC = (WrappedComponent) => {
 }
 
 export default LoaderHOC;
+
