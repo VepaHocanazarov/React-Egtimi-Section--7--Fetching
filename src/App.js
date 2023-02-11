@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import "./App.css"
 import Pratik from './Pratik';
+import axios from "axios";
 
 class App extends Component {
 
